@@ -6,15 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.kazpol.R
+import com.example.kazpol.databinding.FragmentNewsBinding
 
 class NewsFragment : Fragment() {
+
+    private lateinit var binding: FragmentNewsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_news, container, false)
+        binding = FragmentNewsBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
 }
