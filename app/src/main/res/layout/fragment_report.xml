@@ -10,7 +10,7 @@
         android:id="@+id/ivReportImage"
         android:layout_width="249dp"
         android:layout_height="246dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="40dp"
         android:scaleType="centerCrop"
         app:shapeAppearanceOverlay="@style/style_corner_25dp"
         android:background="@color/light_gray"
