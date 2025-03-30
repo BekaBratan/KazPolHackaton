@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:gravity="center_horizontal"
         android:layout_marginHorizontal="24dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,19 +18,18 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <EditText
-            android:id="@+id/etIIN"
+            android:id="@+id/etPhone"
             android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/sh_stroke_r12dp"
             android:minLines="1"
-            android:hint="IIN"
+            android:hint="Phone Number"
             android:fontFamily="@font/roboto_medium"
             android:textColorHint="@color/light_gray"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:gravity="start"
-            android:enabled="false"
             android:singleLine="false"
             android:paddingHorizontal="8dp"
             android:paddingVertical="8dp"/>
@@ -47,7 +47,6 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:gravity="start"
-            android:enabled="false"
             android:singleLine="false"
             android:paddingHorizontal="8dp"
             android:paddingVertical="8dp"
@@ -68,6 +67,21 @@
             android:paddingHorizontal="8dp"
             android:paddingVertical="4dp"
             android:layout_marginTop="36dp"
+            android:layout_marginHorizontal="48dp"/>
+
+        <TextView
+            android:id="@+id/btnGoToSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/navy_blue"
+            android:text="Sign up"
+            android:fontFamily="@font/roboto_semibold"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:textSize="15sp"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:layout_marginTop="10dp"
             android:layout_marginHorizontal="48dp"/>
 
     </LinearLayout>
