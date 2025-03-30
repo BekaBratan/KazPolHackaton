@@ -6,15 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.kazpol.R
+import com.example.kazpol.databinding.FragmentSOSBinding
 
 class SOSFragment : Fragment() {
+
+    private lateinit var binding: FragmentSOSBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_s_o_s, container, false)
+        binding = FragmentSOSBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
 }
