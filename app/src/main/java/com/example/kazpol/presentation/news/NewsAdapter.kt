@@ -6,10 +6,9 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.kazpol.data.Article
+import com.example.kazpol.data.model.Article
 import com.example.kazpol.databinding.ItemNewsBinding
 import com.example.unihub.utils.RcViewItemClickIdCallback
-import kotlin.collections.get
 
 open class NewsAdapter: RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 

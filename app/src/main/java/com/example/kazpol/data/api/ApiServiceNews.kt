@@ -1,12 +1,7 @@
 package com.example.unihub.data.api
 
-import com.example.kazpol.data.NewsResponse
-import retrofit2.http.Body
+import com.example.kazpol.data.model.NewsResponse
 import retrofit2.http.GET
-import retrofit2.http.HTTP
-import retrofit2.http.Header
-import retrofit2.http.POST
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiServiceNews {
