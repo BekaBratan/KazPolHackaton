@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.profile.ProfileFragment">
+    tools:context=".presentation.auth.SignUpFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,18 +16,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Name"
-            android:fontFamily="@font/roboto_medium"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:gravity="start"
-            android:singleLine="false"
-            android:paddingHorizontal="8dp"/>
-
         <EditText
             android:id="@+id/etReportText"
             android:inputType="text"
@@ -35,88 +23,52 @@
             android:layout_height="wrap_content"
             android:background="@drawable/sh_stroke_r12dp"
             android:minLines="1"
+            android:hint="Name"
             android:fontFamily="@font/roboto_medium"
             android:textColorHint="@color/light_gray"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:gravity="start"
             android:singleLine="false"
             android:paddingHorizontal="8dp"
             android:paddingVertical="8dp"
-            android:layout_marginTop="4dp"/>
-
-        <TextView
-            android:id="@+id/tvBirthDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Date of Birth"
-            android:fontFamily="@font/roboto_medium"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-            android:textSize="16sp"
-            android:gravity="start"
-            android:singleLine="false"
-            android:paddingHorizontal="8dp"/>
+            android:layout_marginTop="14dp"/>
 
         <EditText
             android:id="@+id/etBirthDate"
-            android:inputType="text"
+            android:inputType="date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/sh_stroke_r12dp"
             android:minLines="1"
+            android:hint="Date of Birth"
             android:fontFamily="@font/roboto_medium"
             android:textColorHint="@color/light_gray"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:gravity="start"
             android:singleLine="false"
             android:paddingHorizontal="8dp"
             android:paddingVertical="8dp"
-            android:layout_marginTop="4dp"/>
-
-        <TextView
-            android:id="@+id/tvPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Phone Number"
-            android:fontFamily="@font/roboto_medium"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-            android:textSize="16sp"
-            android:gravity="start"
-            android:singleLine="false"
-            android:paddingHorizontal="8dp"/>
+            android:layout_marginTop="20dp"/>
 
         <EditText
             android:id="@+id/etPhone"
-            android:inputType="text"
+            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/sh_stroke_r12dp"
             android:minLines="1"
+            android:hint="Phone Number"
             android:fontFamily="@font/roboto_medium"
             android:textColorHint="@color/light_gray"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:gravity="start"
             android:singleLine="false"
             android:paddingHorizontal="8dp"
             android:paddingVertical="8dp"
-            android:layout_marginTop="4dp"/>
-
-        <TextView
-            android:id="@+id/tvLocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Current Location"
-            android:fontFamily="@font/roboto_medium"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-            android:textSize="16sp"
-            android:gravity="start"
-            android:singleLine="false"
-            android:paddingHorizontal="8dp"/>
+            android:layout_marginTop="20dp"/>
 
         <EditText
             android:id="@+id/etLocation"
@@ -125,46 +77,54 @@
             android:layout_height="wrap_content"
             android:background="@drawable/sh_stroke_r12dp"
             android:minLines="1"
+            android:hint="Current Location"
             android:fontFamily="@font/roboto_medium"
             android:textColorHint="@color/light_gray"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:gravity="start"
             android:singleLine="false"
             android:paddingHorizontal="8dp"
             android:paddingVertical="8dp"
-            android:layout_marginTop="4dp"/>
-
-        <TextView
-            android:id="@+id/tvIIN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="IIN"
-            android:fontFamily="@font/roboto_medium"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-            android:textSize="16sp"
-            android:gravity="start"
-            android:singleLine="false"
-            android:paddingHorizontal="8dp"/>
+            android:layout_marginTop="20dp"/>
 
         <EditText
             android:id="@+id/etIIN"
-            android:inputType="text"
+            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/sh_stroke_r12dp"
             android:minLines="1"
+            android:hint="IIN"
             android:fontFamily="@font/roboto_medium"
             android:textColorHint="@color/light_gray"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:gravity="start"
             android:enabled="false"
             android:singleLine="false"
             android:paddingHorizontal="8dp"
             android:paddingVertical="8dp"
-            android:layout_marginTop="4dp"/>
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sh_stroke_r12dp"
+            android:minLines="1"
+            android:hint="Password"
+            android:fontFamily="@font/roboto_medium"
+            android:textColorHint="@color/light_gray"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="start"
+            android:enabled="false"
+            android:singleLine="false"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp"
+            android:layout_marginTop="20dp"/>
 
         <TextView
             android:id="@+id/btnSave"
@@ -172,7 +132,7 @@
             android:layout_height="58dp"
             android:background="@drawable/sh_stroke_r12dp"
             android:backgroundTint="@color/navy_blue"
-            android:text="Save Changes"
+            android:text="Sing up"
             android:fontFamily="@font/roboto_semibold"
             android:gravity="center"
             android:textColorHint="@color/light_gray"

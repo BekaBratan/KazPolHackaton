@@ -1,4 +1,4 @@
-package com.example.kazpol.presentation.profile
+package com.example.kazpol.presentation.auth
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,17 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.kazpol.R
-import com.example.kazpol.databinding.FragmentProfileBinding
+import com.example.kazpol.databinding.FragmentSignUpBinding
 
-class ProfileFragment : Fragment() {
+class SignUpFragment : Fragment() {
 
-    private lateinit var binding: FragmentProfileBinding
+    private lateinit var binding: FragmentSignUpBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentProfileBinding.inflate(layoutInflater, container, false)
+        binding = FragmentSignUpBinding.inflate(inflater, container, false)
         return binding.root
     }
 
