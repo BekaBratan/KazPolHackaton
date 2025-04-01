@@ -31,9 +31,10 @@ class SignInFragment : Fragment() {
 
         val sharedProvider = SharedProvider(requireContext())
 
-//        if (sharedProvider.isAuthorized()) {
+        if (sharedProvider.isAuthorized()) {
 //            findNavController().navigate(SignInFragmentDirections.actionSignInFragmentToReportFragment())
-//        }
+            sharedProvider.clearShared()
+        }
 
         binding.run {
             btnGoToSignUp.setOnClickListener {

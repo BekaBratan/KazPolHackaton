@@ -13,14 +13,17 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
+import androidx.fragment.app.viewModels
 import com.example.kazpol.R
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.example.kazpol.databinding.FragmentSOSBinding
+import com.example.kazpol.utils.SharedProvider
 import com.google.android.gms.location.LocationServices
 
 class SOSFragment : Fragment() {
 
     private lateinit var binding: FragmentSOSBinding
+    private val viewModel: SOSViewModel by viewModels()
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private val locationPermissionRequest = registerForActivityResult(
@@ -65,7 +68,18 @@ class SOSFragment : Fragment() {
             if (location != null) {
                 val latitude = location.latitude
                 val longitude = location.longitude
-                binding.tvLocation.text = "Lat: $latitude, Lng: $longitude"
+                val sharedProvider = SharedProvider(requireContext())
+                binding.tvLocation.visibility = View.VISIBLE
+                binding.tvLocation.text = "Lat: $latitude\nLng: $longitude"
+
+                Toast.makeText(requireContext(), sharedProvider.getToken(), Toast.LENGTH_SHORT).show()
+                viewModel.SOS(token = sharedProvider.getToken(), longitude = longitude.toInt(), latitude = latitude.toInt())
+                viewModel.sosResponse.observe(viewLifecycleOwner, {
+                    Toast.makeText(requireContext(), "SOS sent", Toast.LENGTH_SHORT).show()
+                })
+                viewModel.errorResponse.observe(viewLifecycleOwner, {
+                    Toast.makeText(requireContext(), it?.error, Toast.LENGTH_SHORT).show()
+                })
             } else {
                 Toast.makeText(requireContext(), "Location not found", Toast.LENGTH_SHORT).show()
             }

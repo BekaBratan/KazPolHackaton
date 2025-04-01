@@ -7,7 +7,7 @@ import com.example.kazpol.data.model.SignInResponse
 
 class SharedProvider(private val context: Context) {
     private val sharedToken = "AccessToken"
-    private val tokenType = "TokenType"
+    private val tokenType = "Bearer"
     private val isAuthorized = "isAuthorized"
 
     private val preferences: SharedPreferences
@@ -33,7 +33,7 @@ class SharedProvider(private val context: Context) {
     }
 
     fun getToken():String {
-        return "${preferences.getString(tokenType, "without_token_type")} ${preferences.getString(sharedToken, "without_token")}"
+        return "${preferences.getString(tokenType, "Bearer")} ${preferences.getString(sharedToken, "Bearer")}"
     }
 
     fun setToken(token: String) {
